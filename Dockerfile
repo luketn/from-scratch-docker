@@ -13,5 +13,5 @@ FROM alpine
 WORKDIR /app
 COPY --from=build /app/main ./
 COPY --from=build /app/libs/ /libs/
-ENV PATH="/libs:${PATH}"
+ENV PATH="/app/libs:${PATH}"
 ENTRYPOINT ["/app/main"]
